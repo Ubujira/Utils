@@ -1,21 +1,11 @@
 package me.insanitydev.utils;
 
 import java.awt.*;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.util.Random;
 
 public class ColorUtils {
 
-    private static Random random;
-
-    static {
-        try {
-            random = SecureRandom.getInstanceStrong();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
+    private static final Random random = new Random();
 
     //Utility classes are not meant to be instantiated.
     private ColorUtils() {
@@ -33,15 +23,16 @@ public class ColorUtils {
         float green = random.nextFloat() + brightnessIncrease;
         float blue = random.nextFloat() + brightnessIncrease;
 
-        return new Color(red, green , blue);
+        return new Color(red, green, blue);
     }
 
     /**
      * Creates a random color with no additional brightness.
+     *
      * @return The random color.
      */
     public static Color randomColor() {
-        return new Color(random.nextFloat(), random.nextFloat() , random.nextFloat());
+        return new Color(random.nextFloat(), random.nextFloat(), random.nextFloat());
     }
 
 }
