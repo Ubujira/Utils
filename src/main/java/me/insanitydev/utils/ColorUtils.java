@@ -5,8 +5,14 @@ import java.util.Random;
 
 public class ColorUtils {
 
+    //Utility classes are not meant to be instantiated.
+    private ColorUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Creates a random color with additional brightness.
+     *
      * @param brightnessIncrease Defines how much brighter the color is.
      * @return The random color.
      */

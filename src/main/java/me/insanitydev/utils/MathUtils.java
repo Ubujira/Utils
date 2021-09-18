@@ -2,6 +2,11 @@ package me.insanitydev.utils;
 
 public class MathUtils {
 
+    //Utility classes are not meant to be instantiated.
+    private MathUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Makes sure that the provided integer is within a defined range.
      * This does the exact same thing that {@link MathUtils#clamp(int, int, int)} does.

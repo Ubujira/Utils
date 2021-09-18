@@ -6,8 +6,14 @@ import java.io.*;
 
 public class JsonUtils {
 
+    //Utility classes are not meant to be instantiated.
+    private JsonUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Reads json from a file.
+     *
      * @param file The file to read from.
      * @return The Json element.
      * @throws FileNotFoundException If the file doesn't exist.
