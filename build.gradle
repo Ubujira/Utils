@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "org.sonarqube" version "3.3"
 }
 
 group 'me.insanitydev'
@@ -22,14 +23,10 @@ test {
     useJUnitPlatform()
 }
 
-plugins {
-  id "org.sonarqube" version "3.3"
-}
-
 sonarqube {
-  properties {
-    property "sonar.projectKey", "InsanityDeveloper_Utils"
-    property "sonar.organization", "insanitydeveloper"
-    property "sonar.host.url", "https://sonarcloud.io"
-  }
+    properties {
+        property "sonar.projectKey", "InsanityDeveloper_Utils"
+        property "sonar.organization", "insanitydeveloper"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
