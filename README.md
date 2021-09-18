@@ -1,3 +1,4 @@
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=InsanityDeveloper_Utils&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=InsanityDeveloper_Utils)
 # Utils
 Contains a few utils which I use all the time.
 
@@ -9,8 +10,8 @@ You can obtain this library from JitPack.
 ```xml
 <repositories>
     <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
     </repository>
 </repositories>
 ```
