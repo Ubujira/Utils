@@ -1,10 +1,10 @@
 plugins {
     id 'java'
     id "org.sonarqube" version "3.3"
+    id 'maven-publish'
 }
 
 group 'me.insanitydev'
-
 version '1.0'
 
 repositories {
@@ -27,5 +27,17 @@ sonarqube {
         property "sonar.projectKey", "InsanityDeveloper_Utils"
         property "sonar.organization", "insanitydeveloper"
         property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'me.insanitydev.utils'
+            artifactId = 'Utils'
+            version = '1.2'
+
+            from components.java
+        }
     }
 }
