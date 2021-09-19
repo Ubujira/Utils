@@ -19,9 +19,9 @@ public class ColorUtils {
      * @return The random color.
      */
     public static Color randomColor(float brightnessIncrease) {
-        float red = random.nextFloat() + brightnessIncrease;
-        float green = random.nextFloat() + brightnessIncrease;
-        float blue = random.nextFloat() + brightnessIncrease;
+        float red = MathUtils.clamp(random.nextFloat() + brightnessIncrease, 0.0f, 1.0f);
+        float green = MathUtils.clamp(random.nextFloat() + brightnessIncrease, 0.0f, 1.0f);
+        float blue = MathUtils.clamp(random.nextFloat() + brightnessIncrease, 0.0f, 1.0f);
 
         return new Color(red, green, blue);
     }
