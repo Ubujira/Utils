@@ -19,7 +19,7 @@ You can obtain this library from JitPack.
 <dependency>
     <groupId>com.github.InsanityDeveloper</groupId>
     <artifactId>Utils</artifactId>
-    <version>v1.2</version>
+    <version>v1.2.1</version>
 </dependency>
 ```
 
@@ -31,7 +31,7 @@ repositories {
 ```
 ```gradle
 dependencies {
-    implementation 'com.github.InsanityDeveloper:Utils:1.2'
+    implementation 'com.github.InsanityDeveloper:Utils:1.2.1'
 }
 ```
 
